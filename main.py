@@ -3,7 +3,6 @@
 #Encode the password
 def encode(password):
     new_password = ""
-    print(password)
     for i in password:
         if (int(i) + 3) <= 9:
             new_password += str(int(i) + 3)
@@ -35,6 +34,6 @@ if __name__ == "__main__":
             encoded_password = encode(password_choice)
         elif menu_choice == 2:
             pass
-
         elif menu_choice == 3:
             break
+        print()
