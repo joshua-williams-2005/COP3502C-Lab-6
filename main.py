@@ -27,11 +27,12 @@ if __name__ == "__main__":
         menu_choice = int(input("Please enter an option: "))
         #carry out the selected action
         if menu_choice == 1:
-            password_choice = ""
-            while len(password_choice) != 8:
-                password_choice = input("Please enter your password to encode: ")
+            password = ""
+            while len(password) != 8:
+                password = input("Please enter your password to encode: ")
             print("Your password has been encoded and stored!")
-            encoded_password = encode(password_choice)
+            password = encode(password)
+            print(password)
         elif menu_choice == 2:
             pass
         elif menu_choice == 3:
