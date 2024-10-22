@@ -1,5 +1,17 @@
 #Joshua Williams
 
+#Encode the password
+def encode(password):
+    new_password = ""
+    print(password)
+    for i in password:
+        if (int(i) + 3) <= 9:
+            new_password += str(int(i) + 3)
+        else:
+            new_password += str(int(i) - 7)
+    return new_password
+
+
 #start the program
 if __name__ == "__main__":
     #loop while the user wants to continue
@@ -16,8 +28,11 @@ if __name__ == "__main__":
         menu_choice = int(input("Please enter an option: "))
         #carry out the selected action
         if menu_choice == 1:
-            password_choice = int(input("Please enter your password to encode: "))
+            password_choice = ""
+            while len(password_choice) != 8:
+                password_choice = input("Please enter your password to encode: ")
             print("Your password has been encoded and stored!")
+            encoded_password = encode(password_choice)
         elif menu_choice == 2:
             pass
 
